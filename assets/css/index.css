@@ -119,12 +119,15 @@ button {
 
 .btn-succes {
   color: #fff;
+  font-weight: 700;
+  font-size: 16px;
   padding: 0 25px;
   height: 35px;
   background-color: #59e583;
 }
 
 button .material-icons {
+  line-height: 0;
   vertical-align: middle;
 }
 
