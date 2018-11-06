@@ -40,7 +40,7 @@ app.controller("shoppingListCtrl", function($scope) {
     localStorage.setItem("itens", JSON.stringify($scope.itemList));
   }
 
-  if(JSON.parse(localStorage.getItem("itens")).length > 0) {
+  if(JSON.parse(localStorage.getItem("itens")) != null) {
     $scope.itemList = JSON.parse(localStorage.getItem("itens"));
   }
 });

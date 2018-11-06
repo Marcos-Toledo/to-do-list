@@ -30,11 +30,11 @@ html, body {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  background-color: #eaeff9;
+  background-color: #fafafa;
 }
 
 h1 {
-  color: #fff;
+  color: #ccc;
   text-align: center;
   padding: 20px 5px;
 }
@@ -53,7 +53,7 @@ section {
 ul {
   list-style: none;
   margin-bottom: 30px;
-  box-shadow: 0 6px 5px rgba(0,0,0,0.3)
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 li {
@@ -68,6 +68,10 @@ li {
   border-bottom: 1px solid rgb(187, 187, 187);
   background-color: #fff;
   animation: scale 200ms;
+}
+
+li:last-child {
+  border-bottom-color: transparent;
 }
 
 li span {
