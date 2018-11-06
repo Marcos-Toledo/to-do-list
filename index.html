@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+  </head>
+  <body ng-app="shoppingList" ng-controller="shoppingListCtrl">
+    <header>
+      <h1>My Shopping List</h1>
+    </header>
+    
+    <section>
+      <div class="st-content">
+        <ul>
+          <li ng-repeat="iten in itemList track by $index" ng-if="iten.boolean == false">
+            <span>{{ iten.nameIten }}</span>
+            <div>
+              <button ng-click="iBought(iten)" class="button-succes">comprado</button>
+              <button ng-click="removeIten($index)" class="button-danger">remover</button>
+            </div>
+          </li>
+          <li ng-repeat="iten in itemList track by $index" ng-if="iten.boolean == true">
+            <span>{{ iten.nameIten }}</span>
+            <div>
+              <button ng-click="iDidNotBuy(iten)">voltar</button>
+              <button ng-click="removeIten($index)" class="button-danger">remover</button>
+            </div>
+          </li>
+        </ul>
+  
+        <button ng-click="clearList()" class="button-danger clear-list" ng-if="itemList.length > 0">limpar lista</button>
+      </div>
+    </section>
+  
+    <footer>
+      <div class="div-input">
+        <input type="text" name="iten" ng-model="nameIten" class="input-nema-iten">
+        <button ng-click="addItens()" class="button-succes">Add</button>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="assets/js/shoppingListCtrl.js"></script>
+  </body>
+</html>
