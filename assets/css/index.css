@@ -6,23 +6,6 @@
   box-sizing: border-box;
 }
 
-button {
-  height: 30px;
-  padding: 0 5px;
-  border: none;
-  cursor: pointer
-}
-
-.button-danger {
-  color: #fff;
-  background-color: #ad2020;
-}
-
-.button-succes {
-  color: #fff;
-  background-color: #59e583;
-}
-
 html, body {
   height: 100%;
 }
@@ -111,9 +94,31 @@ footer {
   border: none;
 }
 
-.div-input button {
-  height: 35px;
+button {
+  height: 30px;
+  padding: 0 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.button-danger {
+  color: #ad2020;
+}
+
+.button-succes {
+  color: #59e583;
+}
+
+.btn-default {
+  color: #fff;
   padding: 0 25px;
+  border-radius: 5px;
+  background-color: #203b66;
+}
+
+button .material-icons {
+  vertical-align: middle;
 }
 
 @-webkit-keyframes scale {

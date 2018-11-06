@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping List</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
   </head>
   <body ng-app="shoppingList" ng-controller="shoppingListCtrl">
@@ -18,20 +20,41 @@
           <li ng-repeat="iten in itemList track by $index" ng-if="iten.boolean == false">
             <span>{{ iten.nameIten }}</span>
             <div>
-              <button ng-click="iBought(iten)" class="button-succes">comprado</button>
-              <button ng-click="removeIten($index)" class="button-danger">remover</button>
+              <button ng-click="iBought(iten)" class="button-succes">
+                <i class="material-icons">
+                  add_shopping_cart
+                </i>
+              </button>
+              <button ng-click="removeIten($index)" class="button-danger">
+                <i class="material-icons">
+                  delete
+                </i>
+              </button>
             </div>
           </li>
           <li ng-repeat="iten in itemList track by $index" ng-if="iten.boolean == true">
             <span>{{ iten.nameIten }}</span>
             <div>
-              <button ng-click="iDidNotBuy(iten)">voltar</button>
-              <button ng-click="removeIten($index)" class="button-danger">remover</button>
+              <button ng-click="iDidNotBuy(iten)">
+                <i class="material-icons">
+                  remove_shopping_cart
+                </i>
+              </button>
+              <button ng-click="removeIten($index)" class="button-danger">
+                <i class="material-icons">
+                  delete
+                </i>
+              </button>
             </div>
           </li>
         </ul>
   
-        <button ng-click="clearList()" class="button-danger clear-list" ng-if="itemList.length > 0">limpar lista</button>
+        <button ng-click="clearList()" class="btn-default clear-list" ng-if="itemList.length > 0">
+          <i class="material-icons">
+            clear_all
+          </i>
+          <span>limpar lista</span>
+        </button>
       </div>
     </section>
   
